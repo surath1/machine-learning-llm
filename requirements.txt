@@ -13,7 +13,7 @@ numpy
 matplotlib
 seaborn
 python-box  ### use for python-box exception instead of custom expexception.
-pyYAML
+pyyaml
 tqdm
 ensure ### it will ensure anootation for wrong input 
 joblib
