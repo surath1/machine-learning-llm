@@ -3,11 +3,9 @@ openai
 huggingface_hub
 python-dotenv
 streamlit
-tensorflow
-### tensorflow==2.12.0
+tensorflow  ### tensorflow==2.12.0
 pandas 
-mlflow
-#mlflow==2.2.2
+mlflow #mlflow==2.2.2
 notebook
 numpy
 matplotlib
