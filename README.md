@@ -46,9 +46,9 @@ For a specific name:
 
 1. config.yaml
 2. params.yaml
-3. entity
-4. configuration manager in src config
-5. components
+3. entity/entity_config.py
+4. config/config_manager.py
+5. components/data_ingestion.py || vg16_base_model.py 
 6. pipeline
 7. main.py
 

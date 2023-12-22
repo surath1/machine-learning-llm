@@ -1,6 +1,6 @@
 from llm.logchain_model.constants import * 
 from llm.logchain_model.utils.common import read_yaml, create_directories
-from llm.logchain_model.entity.entity_config import DataIngestionConfig
+from llm.logchain_model.entity.entity_config import (DataIngestionConfig, Vgg16BaseModelConfig)
 
 class ConfigManager:
     def __init__(self,
@@ -27,3 +27,21 @@ class ConfigManager:
 
         return data_ingestion_config
 
+
+    def get_vgg16_base_model_config(self) -> Vgg16BaseModelConfig:
+        config = self.config.vgg16_base_model
+        
+        create_directories([config.root_dir])
+
+        vgg16_base_model_config = Vgg16BaseModelConfig(
+            root_dir=Path(config.root_dir),
+            base_model_path=Path(config.base_model_path),
+            updated_base_model_path=Path(config.updated_base_model_path),
+            params_image_size=self.params.IMAGE_SIZE,
+            params_learning_rate=self.params.LEARNING_RATE,
+            params_include_top=self.params.INCLUDE_TOP,
+            params_weights=self.params.WEIGHTS,
+            params_classes=self.params.CLASSES
+        )
+
+        return vgg16_base_model_config
