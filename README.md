@@ -49,8 +49,8 @@ For a specific name:
 3. entity/entity_config.py
 4. config/config_manager.py
 5. components/data_ingestion.py || vg16_base_model.py 
-6. pipeline
-7. main.py
+6. pipeline/stg_data_ingestion.py | vgg16_data_ingestion.py
+7. main.py  (program start $$python main.py)
 
 ## VG16
 
